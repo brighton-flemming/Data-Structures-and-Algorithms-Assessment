@@ -50,7 +50,7 @@ def word_frequency(sentence):
             else:
                 frequency_dict[cleaned_word] = 1
         
-        return frequency_dict
+    return frequency_dict
     
 sentence = "This is a test sentence. This sentence is a test."
 result = word_frequency(sentence)
