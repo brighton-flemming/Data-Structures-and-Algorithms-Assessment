@@ -33,7 +33,29 @@ def remove_duplicates(sequence):
 
 input_sequence = [2, 3, 2, 4, 5, 3, 6, 7, 5]
 result = remove_duplicates(input_sequence)
-print(result)  # Output: [2, 3, 4, 5, 6, 7]                                       
+print(result)  # Output: [2, 3, 4, 5, 6, 7]    
+
+
+def word_frequency(sentence):
+    words = sentence.split()
+
+    frequency_dict = {}
+
+    for word in words:
+        cleaned_word = word.strip('.,!?').lower()
+
+        if cleaned_word:
+            if cleaned_word in frequency_dict:
+                frequency_dict[cleaned_word] += 1
+            else:
+                frequency_dict[cleaned_word] = 1
+        
+        return frequency_dict
+    
+sentence = "This is a test sentence. This sentence is a test."
+result = word_frequency(sentence)
+print(result)
+
 
 
 
